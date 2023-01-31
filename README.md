@@ -2,10 +2,11 @@
 
 # Introdução
 
-[IGNEWS](https://github.com/marciovz/ignews/) é um blog de visualização de conteúdo que requer uma inscrição e pagamento para ter acesso ao conteúdo postado.
+[IGNEWS](https://github.com/marciovz/ignews/) é um blog de visualização de conteúdo com gerenciamento de inscrições e pagamentos mensais.
 
-O Acesso ao conteúdo é feito através do login por meio do [Github](https://github.com/).
-A inscrição e pagamento é feita através da plataforma [Stripe](https://stripe.com/), e as informações dos registros do usuário são armazenados no banco de dados [Faunadb](https://fauna.com/).
+O Acesso ao conteúdo é feito através do login por meio de uma conta no [Github](https://github.com/).
+
+A inscrições e pagamentos são feitas através da plataforma da [Stripe](https://stripe.com/), e as informações dos registros do usuário e suas incrições são armazenados no banco de dados [Faunadb](https://fauna.com/).
 
 O conteúdo é gerenciado através da plataforma do [Prismic](https://prismic.io/).
 
@@ -76,16 +77,18 @@ PRISMIC_ACCESS_TOKEN= ---digite aqui seu Token de acesso ao prismic---
 ## 3 - Rodando a aplicação
 
 ```shell
-  # Rodando o projeto
+  # Inicializando o servidor do projeto
   $ yarn dev
 ```
 
 ## 4 - Visualizando a aplicação
 
-Abra um navegador e digite o endereço que onde está rodando o servidor next.
+Abra o navegador e digite o endereço que onde está rodando o servidor da aplicação.
 
-```
+```shell
+  # Digite o endereço da aplicação no seu navegador
   http://localhost:3000/
+
 ```
 
 <div align="center" >
@@ -94,3 +97,5 @@ Abra um navegador e digite o endereço que onde está rodando o servidor next.
 </div>
 
 ## 5 - Melhorias
+
+- Aplicação em desenvolvimento
