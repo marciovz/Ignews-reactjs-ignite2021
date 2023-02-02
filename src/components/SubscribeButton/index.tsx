@@ -1,5 +1,4 @@
 import { signIn, useSession } from 'next-auth/react';
-import Error from 'next/error';
 
 import { api } from '../../services/api';
 import { getStripeJs } from '../../services/stripe-js';
@@ -27,12 +26,11 @@ export function SubscribeButton({ priceId }: SubscribeButtonProps) {
       const stripe = await getStripeJs();
 
       stripe?.redirectToCheckout({ sessionId });
-    } catch (error) {
-      console.log(error.message)
+    } catch (err) {
+      console.log(err + "Redirect to checkout error")
     }
 
   }
-
 
   return (
     <button
