@@ -1,9 +1,12 @@
+import { GetStaticProps } from "next";
 import Head from "next/head";
+
+import { getPrismicClient } from "../../services/prismic";
 
 import styles from "./styles.module.scss";
 
 
-function Posts() {
+export default function Posts() {
   return (
     <>
       <Head>
@@ -33,4 +36,15 @@ function Posts() {
   );
 }
 
-export default Posts;
+export const getStaticProps: GetStaticProps = async () => {
+  const prismic = getPrismicClient();
+  const response = await prismic.getAllByType("post");
+
+  console.log(JSON.stringify(response, null, 2));
+
+  return {
+    props: {},
+
+  };
+};
+
