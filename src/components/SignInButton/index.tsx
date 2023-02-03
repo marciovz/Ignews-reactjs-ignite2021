@@ -9,6 +9,7 @@ export function SignInButton() {
 
   console.log("Session " + session);
 
+
   return session ? (
     <button 
       type="button"
