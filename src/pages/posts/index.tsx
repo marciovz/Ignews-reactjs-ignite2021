@@ -18,7 +18,6 @@ interface PostsProps {
 }
 
 export default function Posts({ posts }: PostsProps) {
-  console.log(posts);
   return (
     <>
       <Head>
@@ -61,8 +60,6 @@ export const getStaticProps: GetStaticProps = async () => {
       ),
     };
   });
-
-  console.log(JSON.stringify(posts, null, 2));
 
   return {
     props: {
