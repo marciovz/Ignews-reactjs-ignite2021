@@ -40,7 +40,8 @@ const webHooks = async (req: NextApiRequest, res: NextApiResponse) => {
     try {
       event = stripe.webhooks.constructEvent(buf, secret, process.env.STRIPE_WEBHOOK_SECRET as string);
 
-    }catch (err) {
+    } catch (err) {
+      console.error(`Webhook-error: ${err}`);
       return res.status(400).send(`Webhook-error: ${err}`);
     }
 
@@ -73,15 +74,18 @@ const webHooks = async (req: NextApiRequest, res: NextApiResponse) => {
 
             break;
           default:
-            throw new Error('Unhandled event')
+            console.error('Unhandled event');
+            throw new Error('Unhandled event');
         }
-      }catch (err) {
+      } catch (err) {
+        console.error('Error: Webhook handler failed')
         return res.json({ error: 'Webhook handler failed'})
       }
     }    
 
     res.json({ received: true });
   } else {
+    console.error("Method Not Allowed");
     res.setHeader('Allow', 'POST');
     res.status(405).end('Method not allowed');
   }
