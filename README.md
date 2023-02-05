@@ -93,7 +93,13 @@ Abra o navegador e digite o endereço que onde está rodando o servidor da aplic
 
 <div align="center" >
     <img src="https://raw.githubusercontent.com/marciovz/ignews/main/assets/ignews-home.png" width="300" alt="Ignews home" style="margin-right: 30px" />
-    <img display="inline" src="https://raw.githubusercontent.com/marciovz/ignews/main/assets/ignews-home.png" width="300" alt="Ignews home" />
+    <img src="https://raw.githubusercontent.com/marciovz/ignews/main/assets/ignews-post-list.png" width="300" alt="Ignews Post List" />
+    <img src="https://raw.githubusercontent.com/marciovz/ignews/main/assets/ignews-post-logged.png" width="300" alt="Ignews post logged" />
+</div>
+
+<div align="center" >
+    <img src="https://raw.githubusercontent.com/marciovz/ignews/main/assets/ignews-post-logged.png" width="300" alt="Ignews home" />
+    <img src="https://raw.githubusercontent.com/marciovz/ignews/main/assets/ignews-post-preview.png" width="300" alt="Ignews post preview" style="margin-right: 30px" />
 </div>
 
 ## 5 - Melhorias
