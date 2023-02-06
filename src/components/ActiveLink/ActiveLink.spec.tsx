@@ -13,12 +13,11 @@ jest.mock('next/router', () => {
 
 describe("ActiveLink component", () => {
   it('renders correctly', () => {
-    const { debug } = render(
+    render(
       <ActiveLink href="/" activeClassName="active">
         Home
       </ActiveLink>
     )
-    debug();
   
     expect(screen.getByText('Home')).toBeInTheDocument()
   })

@@ -1,9 +1,6 @@
 import { render, screen } from '@testing-library/react';
 import { Header } from '.';
 
-import { signIn, signOut, useSession } from 'next-auth/react';
-
-
 jest.mock('next/router', () => {
   return {
     useRouter() {
