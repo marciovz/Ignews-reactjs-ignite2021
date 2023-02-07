@@ -10,7 +10,7 @@ import styles from './home.module.scss';
 interface HomeProps {
   product: {
     priceId: string;
-    amount: number;
+    amount: string;
   }
 }
 
@@ -29,7 +29,7 @@ export default function Home({ product }: HomeProps) {
             Get access to all the publications <br />
             { product.amount && <span>for {product.amount} month</span> }
           </p>
-          <SubscribeButton priceId={ product.priceId }/>
+          <SubscribeButton />
         </section>
 
         <Image src="/images/avatar.svg" alt="Girl coding" width={334} height={520} priority />
