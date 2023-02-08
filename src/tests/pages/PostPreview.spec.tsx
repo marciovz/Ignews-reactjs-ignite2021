@@ -3,7 +3,7 @@ import { useSession } from 'next-auth/react';
 import { useRouter } from 'next/router';
 import { mocked } from 'jest-mock';
 
-import Post, { getStaticProps } from '../../pages/posts/preview/[slug]';
+import Post, { getStaticPaths, getStaticProps } from '../../pages/posts/preview/[slug]';
 import { getPrismicClient } from '../../services/prismic'
 
 const post = { 
@@ -64,7 +64,6 @@ describe('Post preview page', () => {
     render(<Post post={post} />)
 
     expect(pushMock).toHaveBeenCalledWith('/posts/my-new-post')
-
   });
 
 
@@ -100,11 +99,19 @@ describe('Post preview page', () => {
             content: '<p>Post content</p>',
             updatedAt: '01 de abril de 2021'
           }
-          
         }
       })
     )
   });
+
+  it('return object configuration when calls function getStaticPaths', () => {
+    const configStaticPaths = getStaticPaths();
+
+    expect(configStaticPaths).toEqual({
+        paths: [],
+        fallback: "blocking",
+      })
+  })
 
 
 })
