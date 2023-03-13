@@ -2,7 +2,7 @@
 
 # Introdução
 
-[IGNEWS](https://github.com/marciovz/ignews/) é um blog de visualização de conteúdo com gerenciamento de inscrições e pagamentos mensais.
+[IGNEWS](https://ignews-marciovz.vercel.app/) é um blog de visualização de conteúdo com gerenciamento de inscrições e pagamentos mensais.
 
 O Acesso ao conteúdo é feito através do login por meio de uma conta no [Github](https://github.com/).
 
@@ -15,6 +15,8 @@ Este projeto é uma implementação da trilha Ignite ReactJs versão 2021 do cur
 <div align="center">
   <img src="https://raw.githubusercontent.com/marciovz/ignews/main/assets/ignews-home.png" width="600" alt="Ignews home" />
 </div>
+
+Acesse o site [IGNEWS](https://ignews-marciovz.vercel.app/) para visualizar a aplicação na WEB.
 
 ## 1 - Requisitos
 
@@ -100,7 +102,3 @@ Abra o navegador e digite o endereço que onde está rodando o servidor da aplic
     <img src="https://raw.githubusercontent.com/marciovz/ignews/main/assets/ignews-post-preview.png" width="300" alt="Ignews post preview" style="margin-right: 30px" />
     <img style="" src="https://raw.githubusercontent.com/marciovz/ignews/main/assets/ignews-post-logged.png" width="300" alt="Ignews home" />
 </div>
-
-## 5 - Melhorias
-
-- Aplicação em desenvolvimento
